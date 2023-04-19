@@ -1,16 +1,24 @@
 # Seguimos_intendo:3
 - Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
- separarcionde digitos en un numero:
+ separarcion de digitos en un numero:
 
 ```
-numeros = []
+numeros = [] # lista vacía
 def separar(x):
-    while x > 0:
-        print(x%10)
-        numeros.append(x % 10)
-        x = x // 10
-    print(numeros[:])
+    """
+    Esta función separa los enteros de cualquier número n ingresado
 
-n = int(input("Ingrese un numero por favor:"))
-separar(n) 
+    Argumentos:
+    x: int = Número a separar
+
+    Devuelve: los numeros que componen al numero x
+    """
+    while x > 0: # X tiene que ser una variable mayor a 0
+        print(x%10) # Está expresión se utiliza para conseguir el último digito de x
+        numeros.append(x % 10) # se le dice al programa que agregue a la lista numeros el ultimo dijito de x
+        x = x // 10 # se le dice al ciclo que se actualice con la cifra mas cercana al último dijito
+    print(numeros[:])
+if __name__ == "__main__":  #Funcion principal
+ n = int(input("Ingrese un numero por favor:"))
+ separar(n) 
 ```
