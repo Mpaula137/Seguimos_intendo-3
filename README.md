@@ -12,5 +12,4 @@ def separar(x):
 
 n = int(input("Ingrese un numero por favor:"))
 separar(n)
-
-            '''
+'''
