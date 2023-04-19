@@ -1,6 +1,9 @@
 # Seguimos_intendo:3
-- Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
- separarcion de digitos en un numero:
+Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
+
+## Punto 1:
+- Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
+separarción de digitos en un numero:
 
 ```
 numeros = [] # lista vacía
@@ -22,3 +25,6 @@ if __name__ == "__main__":  #Funcion principal
  n = int(input("Ingrese un numero por favor:"))
  separar(n) 
 ```
+## Punto 2:
+- Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
+- 
