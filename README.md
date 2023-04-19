@@ -1,9 +1,8 @@
 # Seguimos_intendo:3
-Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
-1. separarcionde digitos en un numero:
+- Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
+ separarcionde digitos en un numero:
 
-
-'''
+```
 numeros = []
 def separar(x):
     while x > 0:
@@ -14,4 +13,4 @@ def separar(x):
 
 n = int(input("Ingrese un numero por favor:"))
 separar(n) 
-'''
+```
