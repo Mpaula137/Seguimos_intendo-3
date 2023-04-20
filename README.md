@@ -2,8 +2,10 @@
 Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
  ### Integrantes del grupo ###
  - Maria Paula Machuca Hortua
- - Aaron Diaz
- - Diego
+ - Aaron Alejandro Suarez Bonilla
+ - Diego Alejandro Muñoz Penna
+ Nombre del grupo Pythonbrokers.
+ [![logo.jpg](https://i.postimg.cc/HL4kxVwv/logo.jpg)](https://postimg.cc/4Kyg24Fp)
 
 ## Punto 1:
 - Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
