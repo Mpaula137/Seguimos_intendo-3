@@ -1,5 +1,9 @@
-# Seguimos_intendo:3
+# Seguimos_intento:3
 Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
+ ### Integrantes del grupo ###
+ - Maria Paula Machuca Hortua
+ - Aaron Diaz
+ - Diego
 
 ## Punto 1:
 - Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
