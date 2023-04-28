@@ -4,7 +4,7 @@ Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
  - Maria Paula Machuca Hortua
  - Aaron Alejandro Suarez Bonilla
  - Diego Alejandro Muñoz Penna
- Nombre del grupo Pythonbrokers.
+ ### Nombre del grupo Pythonbrokers. ###
  [![logo.jpg](https://i.postimg.cc/HL4kxVwv/logo.jpg)](https://postimg.cc/4Kyg24Fp)
 
 ## Punto 1:
@@ -32,5 +32,50 @@ if __name__ == "__main__":  #Funcion principal
  separar(n) 
 ```
 ## Punto 2:
-- Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
-- 
+- Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de
+la decimal.
+```
+numero= float(input("Ingrese un numero flotante: "))
+
+parte_entera=int(numero)#ysamos la funcion int() para obtener la parte entera
+parte_decimal= numero % 1 #Utilizamos el operador modulo para hallar la parte decimal
+
+Digitosparte_entera=[]# lista vacia para almacenar los digitos enteros
+Digitosparte_decimal=[]#lista vacia para almacenar los digitos decimales
+
+while parte_entera >0: #Esto quiere decir que mientras haya digitos para tomar
+    digito= parte_entera%10 #obtener el ultimo digito
+    Digitosparte_entera.append(digito)# agregar el digito a la lista
+    parte_entera //=10 #eliminar el ultimo digito de la parte entera
+Digitosparte_entera.reverse()#ivertir el orden
+
+while parte_decimal != 0: #MIentras haya digitos que tomar
+    digito= int(parte_decimal*10)# Esto para obtener el primer digito, El int convierte al digito en entero para la lista
+    Digitosparte_decimal.append(digito)#agregar el digito a la lista
+    parte_decimal= round ((parte_decimal*10) % 1, 2)  # eliminar el primer dígito de la parte decimal, redondeando a 2 decimales, por eso usamos la funcion count
+
+print("Esta es la parte entera", Digitosparte_entera)
+print("Esta es la parte decimal", Digitosparte_decimal)
+```
+## Punto 3:
+- Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
+```
+if __name__ == "__main__":  #Funcion principal
+ Numero1= (input("Ingrese el primer numero:"))#Pedimos al usuario ingresar dos digitos
+ Numero2= (input("Ingrese el segundo numero:"))
+
+if len(Numero1) != len(Numero2): #Creamos una condicion que nos dice que si la longitud de el numero 1 y dos es distinta
+    print("LOs digitos tienen diferente longitud:/")# se imprime que tiene diferente longitud se detiene el ciclo
+else:
+   if Numero1 == Numero2[::-1]: #Numero2[::-1] quiere decir que muestra el numero pero inverso
+      print (str(Numero1), "y", str(Numero2), "son espejos entre sí.")
+   else:
+      print("No son numeros espejos:((")
+```
+## Punto 4:
+- Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
+```
+f
+```
+## Punto 5:
+- Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
