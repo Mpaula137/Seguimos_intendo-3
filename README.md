@@ -114,3 +114,28 @@ print("Este es el mcm iterativo de", a, "y", b, "es:", mcm_iterativo(a, b))
 # Recursivo
 print("Este es el mcm recursivo de", a, "y", b, "es:", mcm_recursivo(a, b)) 
 ```
+## Punto 6:
+- Desarrollar un programa que determine si en una lista no existen elementos repetidos.
+```
+k
+```
+## Punto 7:
+- Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'
+```
+l
+```
+## Punto 8:
+- Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
+```
+j
+```
+## Punto 9:
+- Resolver el punto 7 del taller 1 usando operaciones con vectores.
+```
+ñ
+```
+## Punto 10:
+- Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
+```
+ñ
+```
