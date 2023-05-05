@@ -79,7 +79,7 @@ f
 ```
 ## Punto 5:
 - Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
-´´´
+```
 def mcm_iterativo(a, b):
     # Buscamos el máximo común divisor con ayuda de una funcion auxiliar 
     def mcd(a, b):#declaramos la variable
@@ -114,4 +114,4 @@ print(mcm_iterativo(a, b))
 
 # Recursivo
 print(mcm_recursivo(a, b)) 
-´´´
+```
