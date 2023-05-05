@@ -103,15 +103,14 @@ def mcm_recursivo(a, b):
         return (a * b) // mcd(a, b)# retornamos el mcm gracias la relacion matematica que tiene con el mcd
     
     return mcm(a, b)
-
-
+if __name__ == "__main__":  #Funcion principal
 # Ejemplo de uso
-a = 4
-b = 23
+ a = float(input("ingrese el primer numero:"))
+ b = float(input("Ingrese el segundo numero:"))
 
 # Iterativo
-print(mcm_iterativo(a, b)) 
+print("Este es el mcm iterativo de", a, "y", b, "es:", mcm_iterativo(a, b)) 
 
 # Recursivo
-print(mcm_recursivo(a, b)) 
+print("Este es el mcm recursivo de", a, "y", b, "es:", mcm_recursivo(a, b)) 
 ```
