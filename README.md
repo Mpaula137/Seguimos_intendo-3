@@ -167,7 +167,39 @@ print("Los elementos de la lista 1 que no están en la lista 2 son:", ElementosN
 ## Punto 9:
 - Resolver el punto 7 del taller 1 usando operaciones con vectores.
 ```
-ñ
+numeros = []
+for i in range(5):
+    numero = float(input("Ingrese el número {}: ".format(i+1)))
+    numeros.append(numero)
+
+promedio = sum(numeros) / len(numeros)
+
+numeros_ordenados = sorted(numeros)
+mediana = numeros_ordenados[len(numeros_ordenados)//2]
+
+
+producto = 1
+for numero in numeros:
+    producto *= numero
+promedio_multiplicativo = producto ** (1/len(numeros))
+
+numeros_ascendente = sorted(numeros)
+
+numeros_descendente = sorted(numeros, reverse=True)
+
+mayor = max(numeros)
+menor = min(numeros)
+potencia = mayor ** menor
+
+menor_cubico = min(numeros) ** (1/3)
+
+print("Promedio: ", promedio)
+print("Mediana: ", mediana)
+print("Promedio multiplicativo: ", promedio_multiplicativo)
+print("Números en orden ascendente: ", numeros_ascendente)
+print("Números en orden descendente: ", numeros_descendente)
+print("Potencia del mayor número elevado al menor número: ", potencia)
+print("Raíz cúbica del menor número: ", menor_cubico)
 ```
 ## Punto 10:
 - Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
