@@ -117,7 +117,22 @@ print("Este es el mcm recursivo de", a, "y", b, "es:", mcm_recursivo(a, b))
 ## Punto 6:
 - Desarrollar un programa que determine si en una lista no existen elementos repetidos.
 ```
-k
+def elementos_repetidos(lista):
+    longitud = len(lista)
+    for i in range(longitud):
+        for j in range(i+1, longitud):
+            if lista[i] == lista[j]:
+                return "La lista presentada contiene elementos repetidos"
+    return "La lista presentada no contiene elementos repetidos"
+    
+mi_lista = []
+n = int(input("Ingrese la cantidad de elementos que desea agregar a la lista: "))
+for i in range(n):
+    elemento = input("Ingrese un elemento sin espacios: ")
+    mi_lista.append(elemento)
+
+print(elementos_repetidos(mi_lista))
+
 ```
 ## Punto 7:
 - Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'
@@ -127,7 +142,27 @@ l
 ## Punto 8:
 - Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
 ```
-j
+lista1 = []
+n = int(input("¿Cuántos elementos quieres agregar a la lista 1? "))
+for i in range(n):
+    elemento = input("Ingresa un elemento: ")
+    lista1.append(elemento)
+
+
+lista2 = []
+n = int(input("¿Cuántos elementos quieres agregar a la lista 2? "))
+for i in range(n):
+    elemento = input("Ingresa un elemento: ")
+    lista2.append(elemento)
+
+
+ElementosNoPresentes = []
+for elemento in lista1:
+    if elemento not in lista2:
+        ElementosNoPresentes.append(elemento)
+
+
+print("Los elementos de la lista 1 que no están en la lista 2 son:", ElementosNoPresentes)
 ```
 ## Punto 9:
 - Resolver el punto 7 del taller 1 usando operaciones con vectores.
