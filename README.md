@@ -66,6 +66,10 @@ print("Esta es la parte decimal", Digitosparte_decimal)
 ```
 ## Punto 3:
 - Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
+
+### Explcación: ###
+Este punto inicia solicitando el ingreso de las variables, para despues crear una condicion que muestre (por medio de !=, que denota diferenciacion) si la longitud de ambas variables es igual y así descartarlos del proceso. Caso contrario, si se correlaciona y se muestra el numero pero inverso determinando así que son espejos.
+
 ```
 if __name__ == "__main__":  #Funcion principal
  Numero1= (input("Ingrese el primer numero:"))#Pedimos al usuario ingresar dos digitos
@@ -74,7 +78,7 @@ if __name__ == "__main__":  #Funcion principal
 if len(Numero1) != len(Numero2): #Creamos una condicion que nos dice que si la longitud de el numero 1 y dos es distinta
     print("LOs digitos tienen diferente longitud:/")# se imprime que tiene diferente longitud se detiene el ciclo
 else:
-   if Numero1 == Numero2[::-1]: #Numero2[::-1] quiere decir que muestra el numero pero inverso
+   if Numero1 == Numero2[::-1]: Numero2[::-1] #quiere decir que muestra el numero pero inverso
       print (str(Numero1), "y", str(Numero2), "son espejos entre sí.")
    else:
       print("No son numeros espejos:((")
@@ -88,12 +92,16 @@ f
 ```
 ## Punto 5:
 - Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
+
+### Explcación: ###
+Mediante la función auxiliar mcm_iterativo determinamos el máximo común divisor, mediante la fórmula mcm=(a,b)... y con el uso del mcd se obtiene el mcm. Luego, se implementan funciones recursivas en ambos cálculos con el uso de return luego de cumplir , y así, traer a colación los recursos tanto desde lo iterativo como desde la recursivo.
+
 ```
 def mcm_iterativo(a, b):
     # Buscamos el máximo común divisor con ayuda de una funcion auxiliar 
     def mcd(a, b):#declaramos la variable
         while b != 0:#mientras b sea distinto a 0
-            a, b = b, a % b# a,b es igual a b, juento al modulo de a con b
+            a, b = b, a % b# a,b es igual a b, junto al modulo de a con b
         return a
     
     # Calculamos el mínimo común múltiplo usando la fórmula: mcm(a,b) = (a*b)/mcd(a,b)
@@ -105,7 +113,7 @@ def mcm_recursivo(a, b):
     def mcd(a, b):#declaramos las variable para trabajar 
         if b == 0:#mientras b sea igual a 0
             return a#retornar a
-        return mcd(b, a % b)# luego retornar a,b es igual a b, juento al modulo de a con b
+        return mcd(b, a % b)# luego retornar a,b es igual a b, junto al modulo de a con b
     
     # Función auxiliar para calcular el mínimo común múltiplo de manera recursiva
     def mcm(a, b):#declaramos la funcion 
@@ -125,13 +133,15 @@ print("Este es el mcm recursivo de", a, "y", b, "es:", mcm_recursivo(a, b))
 ```
 ## Punto 6:
 - Desarrollar un programa que determine si en una lista no existen elementos repetidos.
+
 ### Explcación: ###
--
+Estipulamos la función para detectar elementos repetidos como una lista, donde mediante el uso de recorridos sobre la lista, determinamos que, por las posiciones correlacionadas no se contienen elementos repetidos. Finalmente, llamamos a la función principal y en caso de existir elementos repetidos, se agregan a mi_lista (por medio de .append) por ser imprimidos.
+
 ```
 def elementos_repetidos(lista): #Funcion para encontrar elementos repetidos
     longitud = len(lista) # usamos un len para saber la longitud de nuestra lista
     for i in range(longitud): #luego usamos un ciclo for para que recorra la longitud de la lista
-        for j in range(i+1, longitud):# usamos otro for para compara el elemnto actual con los otros elementos
+        for j in range(i+1, longitud):# usamos otro for para comparar el elemnto actual con los otros elementos
             if lista[i] == lista[j]:#compara los elementos
                 return "La lista presentada contiene elementos repetidos"
     return "La lista presentada no contiene elementos repetidos"
