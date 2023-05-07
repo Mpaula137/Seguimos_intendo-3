@@ -187,12 +187,16 @@ if __name__ == "__main__":
 ```
 ## Punto 8:
 - Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
+
 ### Explcación: ###
-- 
+
+Para iniciar creamos la primera lista (vacía), solicitamos la cantidad de elementos que tendrá dicha lista y a continuación la recorremos mediante un ciclo for para agregarle elementos mediante una nueva entrada input y con el uso de .append añadimos finalmente estos elementos a la lista vacía. Siguiendo los mismos pasos se crea la segunda lista.
+Se crea una tercera lista inicialmente con los mismos pasos, hasta implementar un condicional, donde, a falta de correspondencia entre elementos de ambas listas, se agregan estos elementos no correspondidos con .append.
+Finalmente se imprimen las tres listas.
 ```
 lista1 = [] #creamos la primera lista
 n = int(input("¿Cuántos elementos quieres agregar a la lista 1? ")) #el usuario dice la cantidad de elementos que tendra la lista
-for i in range(n): #creamos un ciclo for para agragar elementos a a lista
+for i in range(n): #creamos un ciclo for para agregar elementos a a lista
     elemento = input("Ingresa un elemento: ")
     lista1.append(elemento)# agragamos los elementos
 
