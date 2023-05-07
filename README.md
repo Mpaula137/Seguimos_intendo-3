@@ -271,7 +271,7 @@ print("Raíz cúbica del menor número: ", menor_cubico)
 - Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 ### Explcación: ###
 
-Inicialmente definimos la función que determinara si la matriz es mágica, esto 
+Inicialmente definimos la función que determinara si la matriz es mágica, esto repitiendo el proceso de realizar las sumas de las filas, las columnas y las diagonales y verificando que el resultado sea el mismo. Para ello se toma la posición de cada arreglo de la matriz que se pretenda y se suma en un ciclo for, además, si en algún punto de las sumas no concuerda algún u otro resultado, retornará un false por lo que imprimirá que no es una matriz mágica.
 
 ```
 def matrizMagica(matriz): 
