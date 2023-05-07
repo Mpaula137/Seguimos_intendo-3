@@ -38,11 +38,13 @@ if __name__ == "__main__":  #Funcion principal
 - Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de
 la decimal.
 ### Explcación: ###
-- 
+Para este segundo punto, implementamos una entrada que distribuimos en dos variables y así obtener la parte decimal y la parte entera, respectivamente, se crean dos listas vacías para almacenar cada uno de los tipos de datos.
+Luego, mediante un ciclo While, determinamos que mientras hayan digitos por considerar, se obtiene el ultimo digito de la lista (con el modulo del mismo entre 10) y a su vez se elimina el ultimo digito de la parte entera. Acto seguido, se implementa .reverse para inverir el orden y se realiza el proceso por una segunda vez pero, desde la intención contraria al tener que eliminar el primer digiíto de la parte decimal.
+
 ```
 numero= float(input("Ingrese un numero flotante: "))
 
-parte_entera=int(numero)#ysamos la funcion int() para obtener la parte entera
+parte_entera=int(numero) #usamos la funcion int() para obtener la parte entera
 parte_decimal= numero % 1 #Utilizamos el operador modulo para hallar la parte decimal
 
 Digitosparte_entera=[]# lista vacia para almacenar los digitos enteros
