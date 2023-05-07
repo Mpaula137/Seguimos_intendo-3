@@ -221,8 +221,17 @@ print("Los elementos de la lista 1 que no están en la lista 2 son:", ElementosN
 ```
 ## Punto 9:
 - Resolver el punto 7 del taller 1 usando operaciones con vectores.
+
 ### Explcación: ###
--
+
+Par iniciar creamos la lista vacía "numeros" y mediante un ciclo for la ejecutaremos 5 veces; se solicita ingresar un numero el cual quedara almacenado en la variable "numero" y con el uso de .append lo agregamos a la lista.
+Para el promedio realizamos las operaciones pertinentes, usando el método len para determinar la cantidad de datos bajo el cual se realizara la división de la suma total.
+En cuanto la mediana, inicialmente se ordenan los numeros con el método "sorted" para posteriormente operar ese identificador y así obtener la mediana.
+Con el promedio multiolicativo, primero se inicializa la variable "producto" para crear un ciclo for que recorra los números de la lista inicial "números", luego se actualiza cada numero al multiplicarlo con la variable "producto" y finalmente por medio del identificador promedio_multiplicativo elevamos el producto entre uno sobre la longitud de la lista "numeros"
+Para organizarlos de forma ascedente y descendente se implementa el método sorted y respectivamente para la segunda organización se agrega el método reverse.
+Luego determinamos el dato mayor y menor mediante las funciones max y min de la lista "numeros" y casí determinar la "potencia" como el mayor elevado al menor.
+Finalmente el menor cúbico se determina utilizando el valor mínimo (con la función min) y se eleva a la un tercio; Se imprime cada requerimiento por aparte aclarando de que es mediante el uso de una cadena de strings que ilustre el nombre del requerimiento a mostrar.
+
 ```
 numeros = [] #creamos una lista 
 for i in range(5):  # Se crea un ciclo for que se ejecutará 5 veces
