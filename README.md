@@ -159,7 +159,10 @@ print(elementos_repetidos(mi_lista))
 ## Punto 7:
 - Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
 ### Explcación: ###
--
+
+Inicialmente se define una función para determinar si existe dos o mas vocales en una lista. Para esto, se crea una lista vacía para guardar las cadenas que cumplan con esta condición; Se crea un ciclo donde se verifica que el objeto sea un tipo de dato string; Se guardan las vocales del elemento x (en el determinador ) al verificar en una relación de correspondencia con los elementos "AEIOUaeiou"; Si efectivamente hay mas de una vocal (con el metodo "len" del determinador se establece si hay mas de una vocal a traves de una relación  mayor que >) se añade el elemento a la lista de vocales. 
+Para efectuar al código, inicializamos la lista vacía, solicitamos el numero de elementos que tendrá dicha lista para así mediante un ciclo for, recorrer los elementos de la misma y en ese punto solicitar los elementos en sí. Agregamos los elementos a la lista vacía mediante .append y efectuamos la función.
+
 ```
 def buscamos_vocales(lista:list) -> list:
     cAdEnAsDe_vocales = [] # se crea una lista para guradar las cadenas que tengan más de 2 vocales.
