@@ -162,56 +162,59 @@ if __name__ == "__main__":
 ## Punto 8:
 - Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
 ```
-lista1 = []
-n = int(input("¿Cuántos elementos quieres agregar a la lista 1? "))
-for i in range(n):
+lista1 = [] #creamos la primera lista
+n = int(input("¿Cuántos elementos quieres agregar a la lista 1? ")) #el usuario dice la cantidad de elementos que tendra la lista
+for i in range(n): #creamos un ciclo for para agragar elementos a a lista
     elemento = input("Ingresa un elemento: ")
-    lista1.append(elemento)
+    lista1.append(elemento)# agragamos los elementos
 
 
-lista2 = []
+lista2 = []# creamos la segunda lista
 n = int(input("¿Cuántos elementos quieres agregar a la lista 2? "))
 for i in range(n):
     elemento = input("Ingresa un elemento: ")
     lista2.append(elemento)
 
 
-ElementosNoPresentes = []
-for elemento in lista1:
-    if elemento not in lista2:
-        ElementosNoPresentes.append(elemento)
+ElementosNoPresentes = [] #creamos la lista de los elementos que no se encuentran
+for elemento in lista1:#un ciclo for para recorrer los elemntos de la lista
+    if elemento not in lista2: #usamos un condicional para validar que no se encuentra en la lista 2
+        ElementosNoPresentes.append(elemento)# los agregamos a la lista
 
-
+print("Esta es la lista 1:", lista1)
+print()
+print("Esta es la lista 2:", lista2)
+print()
 print("Los elementos de la lista 1 que no están en la lista 2 son:", ElementosNoPresentes)
 ```
 ## Punto 9:
 - Resolver el punto 7 del taller 1 usando operaciones con vectores.
 ```
-numeros = []
-for i in range(5):
-    numero = float(input("Ingrese el número {}: ".format(i+1)))
-    numeros.append(numero)
+numeros = [] #creamos una lista 
+for i in range(5):  # Se crea un ciclo for que se ejecutará 5 veces
+    numero = float(input("Ingrese el número {}: ".format(i+1))) #Se solicita al usuario ingresar un número por teclado y se almacena en la variable "numero"
+    numeros.append(numero) # se agrega a la lista
 
-promedio = sum(numeros) / len(numeros)
+promedio = sum(numeros) / len(numeros) # Se calcula el promedio de los números en la lista "numeros"
 
-numeros_ordenados = sorted(numeros)
-mediana = numeros_ordenados[len(numeros_ordenados)//2]
+numeros_ordenados = sorted(numeros)# Se ordena la lista "numeros" en orden ascendente y se almacena en la variable "numeros_ordenados"
+mediana = numeros_ordenados[len(numeros_ordenados)//2]# Se calcula la mediana de los números en la lista "numeros_ordenados" y se almacena en la variable "mediana"
 
 
-producto = 1
-for numero in numeros:
-    producto *= numero
-promedio_multiplicativo = producto ** (1/len(numeros))
+producto = 1# Se inicializa la variable "producto" en 1
+for numero in numeros:# Se crea un ciclo for que recorre los números en la lista "numeros"
+    producto *= numero# Se multiplica cada número en la lista "numeros" con la variable "producto"
+promedio_multiplicativo = producto ** (1/len(numeros))# Se calcula el promedio multiplicativo de los números en la lista
 
-numeros_ascendente = sorted(numeros)
+numeros_ascendente = sorted(numeros)#ordena la lista "numeros" en orden ascendente
 
-numeros_descendente = sorted(numeros, reverse=True)
+numeros_descendente = sorted(numeros, reverse=True) # Se ordena la lista "numeros" en orden descendente
 
-mayor = max(numeros)
-menor = min(numeros)
-potencia = mayor ** menor
+mayor = max(numeros)# Se obtiene el valor máximo de la lista "numeros"
+menor = min(numeros) # Se obtiene el valor mínimo de la lista "numeros"
+potencia = mayor ** menor # Se calcula la potencia
 
-menor_cubico = min(numeros) ** (1/3)
+menor_cubico = min(numeros) ** (1/3)# Se calcula la raíz cúbica del valor mínimo de la lista "numeros" y se almacena en la variable "menor_cubico"
 
 print("Promedio: ", promedio)
 print("Mediana: ", mediana)
