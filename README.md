@@ -11,7 +11,8 @@ Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
 - Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 separarción de digitos en un numero.
 
-### Explcación: ###
+### Explcación: Inicialmente se define una función para separar los elementos (dígitos) del dato ingresado. Posteriormente, siempre y cuando la variable a manejar sea mayor a 0, imprimimos el ultimo digito del dato ingresado por medio del modulo del mismo entre 10. Se agrega a la lista de números este último digito de la variable y con la division dada en numeros enteros, se actualiza el ciclo con la cifra mas cercana al último dígito .
+ ###
 -
 
 ```
@@ -27,8 +28,8 @@ def separar(x):
     """
     while x > 0: # X tiene que ser una variable mayor a 0
         print(x%10) # Está expresión se utiliza para conseguir el último digito de x
-        numeros.append(x % 10) # se le dice al programa que agregue a la lista numeros el ultimo dijito de x
-        x = x // 10 # se le dice al ciclo que se actualice con la cifra mas cercana al último dijito
+        numeros.append(x % 10) # se le dice al programa que agregue a la lista numeros el ultimo digito de x
+        x = x // 10 # se le dice al ciclo que se actualice con la cifra mas cercana al último digito
     print(numeros[:])
 if __name__ == "__main__":  #Funcion principal
  n = int(input("Ingrese un numero por favor:"))
