@@ -11,9 +11,8 @@ Resolución del taller propuesto haciendo uso de bucles, vectores, listas, etc.
 - Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 separarción de digitos en un numero.
 
-### Explcación: Inicialmente se define una función para separar los elementos (dígitos) del dato ingresado. Posteriormente, siempre y cuando la variable a manejar sea mayor a 0, imprimimos el ultimo digito del dato ingresado por medio del modulo del mismo entre 10. Se agrega a la lista de números este último digito de la variable y con la division dada en numeros enteros, se actualiza el ciclo con la cifra mas cercana al último dígito .
- ###
--
+### Explcación: ###
+ Inicialmente se define una función para separar los elementos (dígitos) del dato ingresado. Posteriormente, siempre y cuando la variable a manejar sea mayor a 0, imprimimos el ultimo digito del dato ingresado por medio del modulo del mismo entre 10. Se agrega a la lista de números este último digito de la variable y con la division dada en numeros enteros, se actualiza el ciclo con la cifra mas cercana al último dígito .
 
 ```
 numeros = [] # lista vacía
