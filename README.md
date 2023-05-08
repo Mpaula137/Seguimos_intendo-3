@@ -37,7 +37,7 @@ if __name__ == "__main__":  #Funcion principal
 ## Punto 2:
 - Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de
 la decimal.
-### Explcación: ###
+### Explicación: ###
 Para este segundo punto, implementamos una entrada que distribuimos en dos variables y así obtener la parte decimal y la parte entera, respectivamente, se crean dos listas vacías para almacenar cada uno de los tipos de datos.
 Luego, mediante un ciclo While, determinamos que mientras hayan digitos por considerar, se obtiene el ultimo digito de la lista (con el modulo del mismo entre 10) y a su vez se elimina el ultimo digito de la parte entera. Acto seguido, se implementa .reverse para inverir el orden y se realiza el proceso por una segunda vez pero, desde la intención contraria al tener que eliminar el primer digiíto de la parte decimal.
 
@@ -67,7 +67,7 @@ print("Esta es la parte decimal", Digitosparte_decimal)
 ## Punto 3:
 - Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
 
-### Explcación: ###
+### Explicación: ###
 Este punto inicia solicitando el ingreso de las variables, para despues crear una condicion que muestre (por medio de !=, que denota diferenciacion) si la longitud de ambas variables es igual y así descartarlos del proceso. Caso contrario, si se correlaciona y se muestra el numero pero inverso determinando así que son espejos.
 
 ```
@@ -85,15 +85,55 @@ else:
 ```
 ## Punto 4:
 - Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
-### Explcación: ###
--
+### Explicación: ###
+- primero importamos el math, luego definimos la funsion como tal, usamos los debidos procedimientos los cuales los buscamos en internet, haciendo uso de variables y de ciclo for logramos realizar una aproximacion luego llamamos la funcion y llamamos a la funxion con predeterminados valores. 
 ```
-f
+import math
+
+def aprox_coseno(x, n):
+    """
+    Aproxima la función coseno alrededor de 0 para un valor dado x utilizando los
+    primeros n términos de la serie de Taylor.
+    """
+    
+    # Calcula el valor exacto del coseno de x utilizando la función math.cos()
+    coseno_real = math.cos(x)
+    
+    # Inicializa el valor de la aproximación del coseno en 0
+    coseno_aprox = 0
+    
+    # Recorre los primeros n términos de la serie de Taylor
+    for i in range(n):
+        # Calcula el valor del coeficiente a_i de la serie de Taylor
+        a_i = (-1)**i / math.factorial(2*i)
+        
+        # Calcula el valor de x elevado a la potencia 2i
+        x_potencia = x**(2*i)
+        
+        # Calcula el término i-ésimo de la serie de Taylor
+        termino_i = a_i * x_potencia
+        
+        # Agrega el término i-ésimo a la aproximación del coseno
+        coseno_aprox += termino_i
+    
+    # Calcula el error relativo entre la aproximación y el valor real del coseno
+    error_relativo = abs((coseno_real - coseno_aprox) / coseno_real)
+    
+    # Imprime el valor real del coseno, la aproximación y el error relativo
+    print(f"Valor real: {coseno_real}")
+    print(f"Aproximación: {coseno_aprox}")
+    print(f"Error relativo: {error_relativo}")
+
+if __name__ == "__main__":
+    # Ejemplo de uso de la función aprox_coseno
+    x = 0.5
+    n = 5
+    aprox_coseno(x, n)
 ```
 ## Punto 5:
 - Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 
-### Explcación: ###
+### Explicación: ###
 Mediante la función auxiliar mcm_iterativo determinamos el máximo común divisor, mediante la fórmula mcm=(a,b)... y con el uso del mcd se obtiene el mcm. Luego, se implementan funciones recursivas en ambos cálculos con el uso de return luego de cumplir , y así, traer a colación los recursos tanto desde lo iterativo como desde la recursivo.
 
 ```
@@ -134,7 +174,7 @@ print("Este es el mcm recursivo de", a, "y", b, "es:", mcm_recursivo(a, b))
 ## Punto 6:
 - Desarrollar un programa que determine si en una lista no existen elementos repetidos.
 
-### Explcación: ###
+### Explicación: ###
 Estipulamos la función para detectar elementos repetidos como una lista, donde mediante el uso de recorridos sobre la lista, determinamos que, por las posiciones correlacionadas no se contienen elementos repetidos. Finalmente, llamamos a la función principal y en caso de existir elementos repetidos, se agregan a mi_lista (por medio de .append) por ser imprimidos.
 
 ```
@@ -158,7 +198,7 @@ print(elementos_repetidos(mi_lista))
 ```
 ## Punto 7:
 - Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
-### Explcación: ###
+### Explicación: ###
 
 Inicialmente se define una función para determinar si existe dos o mas vocales en una lista. Para esto, se crea una lista vacía para guardar las cadenas que cumplan con esta condición; Se crea un ciclo donde se verifica que el objeto sea un tipo de dato string; Se guardan las vocales del elemento x (en el determinador ) al verificar en una relación de correspondencia con los elementos "AEIOUaeiou"; Si efectivamente hay mas de una vocal (con el metodo "len" del determinador se establece si hay mas de una vocal a traves de una relación  mayor que >) se añade el elemento a la lista de vocales. 
 Para efectuar al código, inicializamos la lista vacía, solicitamos el numero de elementos que tendrá dicha lista para así mediante un ciclo for, recorrer los elementos de la misma y en ese punto solicitar los elementos en sí. Agregamos los elementos a la lista vacía mediante .append y efectuamos la función.
@@ -188,7 +228,7 @@ if __name__ == "__main__":
 ## Punto 8:
 - Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
 
-### Explcación: ###
+### Explicación: ###
 
 Para iniciar creamos la primera lista (vacía), solicitamos la cantidad de elementos que tendrá dicha lista y a continuación la recorremos mediante un ciclo for para agregarle elementos mediante una nueva entrada input y con el uso de .append añadimos finalmente estos elementos a la lista vacía. Siguiendo los mismos pasos se crea la segunda lista.
 Se crea una tercera lista inicialmente con los mismos pasos, hasta implementar un condicional, donde, a falta de correspondencia entre elementos de ambas listas, se agregan estos elementos no correspondidos con .append.
@@ -222,7 +262,7 @@ print("Los elementos de la lista 1 que no están en la lista 2 son:", ElementosN
 ## Punto 9:
 - Resolver el punto 7 del taller 1 usando operaciones con vectores.
 
-### Explcación: ###
+### Explicación: ###
 
 Par iniciar creamos la lista vacía "numeros" y mediante un ciclo for la ejecutaremos 5 veces; se solicita ingresar un numero el cual quedara almacenado en la variable "numero" y con el uso de .append lo agregamos a la lista.
 Para el promedio realizamos las operaciones pertinentes, usando el método len para determinar la cantidad de datos bajo el cual se realizara la división de la suma total.
@@ -269,9 +309,9 @@ print("Raíz cúbica del menor número: ", menor_cubico)
 ```
 ## Punto 10:
 - Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
-### Explcación: ###
+### Explicación: ###
 
-Inicialmente definimos la función que determinara si la matriz es mágica, esto repitiendo el proceso de realizar las sumas de las filas, las columnas y las diagonales y verificando que el resultado sea el mismo. Para ello se toma la posición de cada arreglo de la matriz que se pretenda y se suma en un ciclo for, además, si en algún punto de las sumas no concuerda algún u otro resultado, retornará un false por lo que imprimirá que no es una matriz mágica.
+- Inicialmente definimos la función que determinara si la matriz es mágica, esto repitiendo el proceso de realizar las sumas de las filas, las columnas y las diagonales y verificando que el resultado sea el mismo. Para ello se toma la posición de cada arreglo de la matriz que se pretenda y se suma en un ciclo for, además, si en algún punto de las sumas no concuerda algún u otro resultado, retornará un false por lo que imprimirá que no es una matriz mágica.
 
 ```
 def matrizMagica(matriz): 
